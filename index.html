@@ -3,162 +3,194 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Assignr</title>
     <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/style-index.css" />
   </head>
   <body>
     
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
+    <!-- top-nav, stickied-->
+    <div class="fixed">
+	<nav class="top-bar" data-topbar role="navigation">
+	    
+	    <div id="settingsIcon" class="left">
+	        <a href="#" data-reveal-id=""><!-----fill data-reveal-id with modalSettings"----->
+		    <img src="img/icon-gear-40x40.png" alt="icon-gear-40x40">
+	       </a>
+	    </div>
+		
+		<!--Settings Modal--><!---------REMOVE COMMENT TO ACTI VATE SETTINGS MODAL
+		<div id="modalSettings" class="reveal-modal" data-reveal>
+		    <h2>&lsaquo;Settings Modal&rsaquo;</h2>
+			<p class="lead">This is the future settings panel.</p>
+			<p>This window will allow users to change a number of options, such as toggling push notifications and modifying the color palette of list items.</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>---------->
+	        
+	    <div id="taskIcon" class="right">
+		<a href="#" data-reveal-id="modalTask">
+		    <img src="img/icon-write-40x40.png" alt="icon-write-40x40">
+		</a>
+	    </div>
+		
+		<!--New Task Modal-->
+		<div id="modalTask" class="reveal-modal" data-reveal>
+		    <h2>New Task</h2>
+			<p class="lead">Create a dynamic list item.</p>
+			<form>
+			    <div class="row"><!----------Task Name---------->
+				<div class="large-12 columns">
+				      <label>Task Name
+				      <input type="text" id="taskNameInput" placeholder="Name it!" />
+				     </label>
+				 </div><!-- end large-12 columns -->
+			    </div><!--end row-->
+			    <div class="row"><!----------Description---------->
+			        <div class="large-12 columns">
+				   <label>Description
+				   <input type="text" id="taskDescriptionInput" placeholder="Because you're bad at remembering things." />
+			           </label>
+			        </div><!-- end large-12 columns -->
+			    </div><!--end row-->
+			    
+  <!----------Importance level.  Commented out for later
+  <div class="row">
+    <div class="large-12columns">
+      <label>Priority Level</label>
+      <input type="radio" name="pokemon" value="1" id="pokemonRed"><label for="pokemonRed">1</label>
+      <input type="radio" name="pokemon" value="2" id="pokemonBlue"><label for="pokemonBlue">2</label>
+      <input type="radio" name="pokemon" value="3" id="pokemonBlue"><label for="pokemonBlue">3</label>
+    </div>
+  </div>---------->
+			   <div class="row"><!----------Deadline----------->
+				<div class="large-12 columns">
+				    <div class="row collapse">
+					<label>Deadline Date</label>
+					    <div class="small-2 columns"><!-----YEAR----->
+					        <span class="postfix">year</span>
+					    </div>
+					    <div class="small-10 columns">
+						<input type="text"  id="taskDateInputYear" placeholder="1999" />
+					    </div>
+					    <!--<div class="small-2 columns">
+					        <span class="postfix">month</span>
+					    </div>
+					    <div class="small-2 columns">
+						<input type="text" id="taskDateInputMonth" placeholder="12" />
+					    </div>
+					    <div class="small-2 columns">
+					        <span class="postfix">day</span>
+					    </div>
+					    <div class="small-2 columns">
+						<input type="text" id="taskDateInputDay" placeholder="31" />
+					    </div>--->
+				    </div><!-----end row collapse------>
+				</div><!-----end large-12 columns------>
+			   </div><!-----end row------>
+			   
+			 <div class="row"><!----------Description---------->
+			        <div class="large-12 columns">
+				   <label>Estimated Hours to Completion
+				   <input type="text" id="taskEstimateInput" placeholder="9001" />
+			           </label>
+			        </div><!-- end large-12 columns -->
+			    </div><!--end row-->
+			    </form>
+			    <a href="#" class="button left" id="submit" onclick="pushTask();">Submit</a><!----------SUBMIT BUTTON---------->
+			    <a href="#" class="button left close-reveal-modal">Cancel</a><!----------CANCEL BUTTON---------->
+			</div>
+		
+		
+	    <div id="appTitle">
+		<h1>Assignr</h1>
+	    </div>
+       </nav>
     </div>
     
-    <div class="row">
-      <div class="large-12 columns">
-      	<div class="panel">
-	        <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-	        <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-	        <p>Once you've exhausted the fun in this document, you should check out:</p>
-	        <div class="row">
-	        	<div class="large-4 medium-4 columns">
-	    		<p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-	    	</div>
-	        	<div class="large-4 medium-4 columns">
-	        		<p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-	        	</div>
-	        	<div class="large-4 medium-4 columns">
-	        		<p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-	        	</div>        
-					</div>
-      	</div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Input Label</label>
-				      <input type="text" placeholder="large-12.columns" />
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-4 medium-4 columns">
-				      <label>Input Label</label>
-				      <input type="text" placeholder="large-4.columns" />
-				    </div>
-				    <div class="large-4 medium-4 columns">
-				      <label>Input Label</label>
-				      <input type="text" placeholder="large-4.columns" />
-				    </div>
-				    <div class="large-4 medium-4 columns">
-				      <div class="row collapse">
-				        <label>Input Label</label>
-				        <div class="small-9 columns">
-				          <input type="text" placeholder="small-9.columns" />
-				        </div>
-				        <div class="small-3 columns">
-				          <span class="postfix">.com</span>
-				        </div>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Select Box</label>
-				      <select>
-				        <option value="husker">Husker</option>
-				        <option value="starbuck">Starbuck</option>
-				        <option value="hotdog">Hot Dog</option>
-				        <option value="apollo">Apollo</option>
-				      </select>
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-6 medium-6 columns">
-				      <label>Choose Your Favorite</label>
-				      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-				      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-				    </div>
-				    <div class="large-6 medium-6 columns">
-				      <label>Check these out</label>
-				      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-				      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-				    </div>
-				  </div>
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Textarea Label</label>
-				      <textarea placeholder="small-12.columns"></textarea>
-				    </div>
-				  </div>
-				</form>
-      </div>     
-
-      <div class="large-4 medium-4 columns">
-			  <h5>Try one of these buttons:</h5>
-			  <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-				<div class="panel">
-        	<h5>So many components, girl!</h5>
-        	<p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-        	<a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
-        </div>
-      </div>
-    </div>
+    <!--<div class="row">
+       <div class="large-12 columns">
+	    
+	    <dl class="accordion" data-accordion>
+		
+	    
+	    
+	    <!-----
+	    <dd class="accordion-navigation accordion-marginTop"> 
+		<a href="#panel7">
+		    <h2 class="accordion-titleFix">Cinema 4D Tutorial</h2>
+		</a>
+	       <div id="panel7" class="content">
+		   <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/2</h4>
+			 	  <img src="img/icon-importanceLvL2-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 07h 12m 46s<br>[30 hours projected]</h6>
+			     </div>
+			 </div>
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div>
+		         </div>
+		</div>
+	    </dd>
+	    </dl>
+       </div> 
+    </div>-->
+  
+  <!------database test here!----->
+       <div class="row">
+       <div class="large-12 columns">
+	    
+	    <dl class="accordion" data-accordion id="task-list"></dl> 
+       </div>
+       </div>
     
+    <div id="footer"><!-----sticky footer right here----->
+	<div class="bottom-bar">
+	    
+	    <div class="left">
+	        <a href="history.html">
+		    <img src="img/icon-leftcarrot-20x40.png" alt="icon-leftcarrot-20x40">
+	       </a>
+	    </div>
+		
+	    <!----------commenting out this icon for now; the calendar can be attempted later
+	    <div class="right">
+		<a href="#">
+		    <img src="img/icon-rightcarrot-20x40.png" alt="icon-rightcarrot-20x40">
+		</a>
+	    </div>---------->
+		
+		<!----------commenting out this icon for now; it currently serves no function
+		
+	    <div id="midIcon">
+		<a href="#" data-reveal-id="modalNav">
+		    <img src="img/icon-navsquare-40x40.png" alt="icon-navsquare-40x40">
+		</a>
+	    </div>----------><!--end #midIcon-->
+	    
+	    <!--Navsquare Modal-->
+	    <!----------commenting out this modal because it is attached to an icon that is not relevant pre-beta
+	    
+		<div id="modalNav" class="reveal-modal" data-reveal>
+		    <h2>This is the future window for supplemental tasks</h2>
+			<p class="lead">Planned journal, inspiration picture storage</p>
+			<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>---------->
+		
+       </div><!--end bottom-bar-->
+    </div> <!--end footer-->
+    <script src="js/vendor/modernizr.js"></script>
     <script src="js/vendor/jquery.js"></script>
+    <script src="js/sticky-footer.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src="js/firebase-connect.js"></script>
+    
     <script>
       $(document).foundation();
     </script>

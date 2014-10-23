@@ -1,0 +1,328 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignr</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style-index.css" />
+  </head>
+  <body>
+    
+    <!-- top-nav, stickied-->
+    <div class="fixed">
+	<nav class="top-bar" data-topbar role="navigation">
+	    
+	    <div id="settingsIcon" class="left">
+	        <a href="#" data-reveal-id=""><!-----fill data-reveal-id with modalSettings"----->
+		    <img src="img/icon-gear-40x40.png" alt="icon-gear-40x40">
+	       </a>
+	    </div>
+		
+		<!--Settings Modal--><!---------REMOVE COMMENT TO ACTI VATE SETTINGS MODAL
+		<div id="modalSettings" class="reveal-modal" data-reveal>
+		    <h2>&lsaquo;Settings Modal&rsaquo;</h2>
+			<p class="lead">This is the future settings panel.</p>
+			<p>This window will allow users to change a number of options, such as toggling push notifications and modifying the color palette of list items.</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>---------->
+	        
+	    <div id="taskIcon" class="right">
+		<a href="#" data-reveal-id="modalTask">
+		    <img src="img/icon-write-40x40.png" alt="icon-write-40x40">
+		</a>
+	    </div>
+		
+		<!--New Task Modal-->
+		<div id="modalTask" class="reveal-modal" data-reveal>
+		    <h2>New Task</h2>
+			<p class="lead">Create a dynamic list item.</p>
+			<form>
+			    <div class="row"><!----------Task Name---------->
+				<div class="large-12 columns">
+				      <label>Task Name
+				      <input type="text" placeholder="Name it!" />
+				     </label>
+				 </div><!-- end large-12 columns -->
+			    </div><!--end row-->
+			    <div class="row"><!----------Description---------->
+			        <div class="large-12 columns">
+				   <label>Description
+				   <input type="text" placeholder="Because you're bad at remembering things." />
+			           </label>
+			        </div><!-- end large-12 columns -->
+			    </div><!--end row-->
+			    
+  <!----------Importance level.  Commented out for later
+  <div class="row">
+    <div class="large-12columns">
+      <label>Priority Level</label>
+      <input type="radio" name="pokemon" value="1" id="pokemonRed"><label for="pokemonRed">1</label>
+      <input type="radio" name="pokemon" value="2" id="pokemonBlue"><label for="pokemonBlue">2</label>
+      <input type="radio" name="pokemon" value="3" id="pokemonBlue"><label for="pokemonBlue">3</label>
+    </div>
+  </div>---------->
+			   <div class="row"><!----------Deadline----------->
+				<div class="large-12 columns">
+				    <div class="row collapse">
+					<label>Deadline Date</label>
+					    <div class="small-2 columns"><!-----YEAR----->
+					        <span class="postfix">year</span>
+					    </div>
+					    <div class="small-2 columns">
+						<input type="text" placeholder="1999" />
+					    </div>
+					    <div class="small-2 columns"><!-----MONTH----->
+					        <span class="postfix">month</span>
+					    </div>
+					    <div class="small-2 columns">
+						<input type="text" placeholder="12" />
+					    </div>
+					    <div class="small-2 columns"><!-----DAY------>
+					        <span class="postfix">day</span>
+					    </div>
+					    <div class="small-2 columns">
+						<input type="text" placeholder="31" />
+					    </div>
+				    </div><!-----end row collapse------>
+				</div><!-----end large-12 columns------>
+			   </div><!-----end row------>
+			   
+			 <div class="row"><!----------Description---------->
+			        <div class="large-12 columns">
+				   <label>Estimated Hours to Completion
+				   <input type="text" placeholder="9001" />
+			           </label>
+			        </div><!-- end large-12 columns -->
+			    </div><!--end row-->
+			</form>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		
+	    <div id="appTitle">
+		<h1>Assignr</h1>
+	    </div>
+       </nav>
+    </div>
+    
+    <div class="row">
+       <div class="large-12 columns">
+	    
+	    <dl class="accordion" data-accordion>
+		
+		<!-----Accordion 1----->
+	        <dd class="accordion-navigation accordion-marginTop">
+		    <a href="#panel1">
+			<h2 class="accordion-titleFix">X-Corp Branding</h2>
+		    </a>
+		    <div id="panel1" class="content">
+			  <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/8</h4>
+			 	  <img src="img/icon-importanceLvL3-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 26h 12m 23s<br>[30 hours projected]</h6>
+			     </div>
+			 </div><!-- end large-12 column-->
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div><!--end large-12 column-->
+		         </div><!--end row-->
+		   </div>
+	   </dd>
+	       
+	    <!-----Accordion 2----->
+	    <dd class="accordion-navigation accordion-marginTop">
+		<a href="#panel2">
+		     <h2 class="accordion-titleFix">Logo Redesign</h2>
+		  </a>
+	       <div id="panel2" class="content">
+		  <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/9</h4>
+			 	  <img src="img/icon-importanceLvL2-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 07h 08m 46s<br>[20 hours projected]</h6>
+			     </div>
+			 </div><!-- end large-12 column-->
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div><!--end large-12 column-->
+		         </div><!--end row-->
+	       </div>
+	    </dd>
+	    
+	    <!-----Accordion 3----->
+	    <dd class="accordion-navigation accordion-marginTop"> 
+		<a href="#panel3">
+		    <h2 class="accordion-titleFix">Fix Video Error</h2>
+		</a>
+	       <div id="panel3" class="content">
+		   <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/10</h4>
+			 	  <img src="img/icon-importanceLvL2-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 11h 15m 37s<br>[15 hours projected]</h6>
+			     </div>
+			 </div><!-- end large-12 column-->
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div><!--end large-12 column-->
+		         </div><!--end row-->
+		</div>
+	    </dd>
+		
+		<!-----Accordion 4----->
+	        <dd class="accordion-navigation accordion-marginTop">
+		    <a href="#panel4">
+			<h2 class="accordion-titleFix">Friend's CV</h2>
+		    </a>
+		    <div id="panel4" class="content">
+			  <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/18</h4>
+			 	  <img src="img/icon-importanceLvL1-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 07h 12m 46s<br>[10 hours projected]</h6>
+			     </div>
+			 </div><!-- end large-12 column-->
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div><!--end large-12 column-->
+		         </div><!--end row-->
+		   </div>
+	   </dd>
+		
+		<!-----Accordion 5----->
+	        <dd class="accordion-navigation accordion-marginTop">
+		    <a href="#panel5">
+			<h2 class="accordion-titleFix">Movie Poster</h2>
+		    </a>
+		    <div id="panel5" class="content">
+			  <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/30</h4>
+			 	  <img src="img/icon-importanceLvL1-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 07h 12m 46s<br>[30 hours projected]</h6>
+			     </div>
+			 </div><!-- end large-12 column-->
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div><!--end large-12 column-->
+		         </div><!--end row-->
+		   </div>
+	   </dd>
+	       
+	    <!-----Accordion 6----->
+	    <dd class="accordion-navigation accordion-marginTop">
+		<a href="#panel6">
+		     <h2 class="accordion-titleFix">Portfolio Revision</h2>
+		  </a>
+	       <div id="panel6" class="content">
+		  <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/2</h4>
+			 	  <img src="img/icon-importanceLvL2-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 07h 12m 46s<br>[30 hours projected]</h6>
+			     </div>
+			 </div><!-- end large-12 column-->
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div><!--end large-12 column-->
+		         </div><!--end row-->
+	       </div>
+	    </dd>
+	    
+	    <!-----Accordion 7----->
+	    <dd class="accordion-navigation accordion-marginTop"> 
+		<a href="#panel7">
+		    <h2 class="accordion-titleFix">Cinema 4D Tutorial</h2>
+		</a>
+	       <div id="panel7" class="content">
+		   <div class="row">
+			  <div class="large-12 column">
+			      <div class="right">
+				  <h4 class="textRight">10/2</h4>
+			 	  <img src="img/icon-importanceLvL2-80x20.png" alt="icon-importanceLvL2-80x20">
+			      </div>
+			      <div class="left">
+				  <h6>00d 07h 12m 46s<br>[30 hours projected]</h6>
+			     </div>
+			 </div><!-- end large-12 column-->
+			 <div class="large-12 column">
+			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
+			  </div><!--end large-12 column-->
+		         </div><!--end row-->
+		</div>
+	    </dd>
+	    </dl>
+       </div> <!--end large-12 columns-->
+    </div><!--end row-->
+  
+  <!------database test here!----->
+  <ul id="task-list"></ul>
+  
+    
+    <div id="footer"><!-----sticky footer right here----->
+	<div class="bottom-bar">
+	    
+	    <div class="left">
+	        <a href="history.html">
+		    <img src="img/icon-leftcarrot-20x40.png" alt="icon-leftcarrot-20x40">
+	       </a>
+	    </div>
+		
+	    <!----------commenting out this icon for now; the calendar can be attempted later
+	    <div class="right">
+		<a href="#">
+		    <img src="img/icon-rightcarrot-20x40.png" alt="icon-rightcarrot-20x40">
+		</a>
+	    </div>---------->
+		
+		<!----------commenting out this icon for now; it currently serves no function
+		
+	    <div id="midIcon">
+		<a href="#" data-reveal-id="modalNav">
+		    <img src="img/icon-navsquare-40x40.png" alt="icon-navsquare-40x40">
+		</a>
+	    </div>----------><!--end #midIcon-->
+	    
+	    <!--Navsquare Modal-->
+	    <!----------commenting out this modal because it is attached to an icon that is not relevant pre-beta
+	    
+		<div id="modalNav" class="reveal-modal" data-reveal>
+		    <h2>This is the future window for supplemental tasks</h2>
+			<p class="lead">Planned journal, inspiration picture storage</p>
+			<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>---------->
+		
+       </div><!--end bottom-bar-->
+    </div> <!--end footer-->
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/sticky-footer.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src="js/firebase-connect.js"></script>
+    
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
