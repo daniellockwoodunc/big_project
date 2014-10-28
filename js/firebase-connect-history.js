@@ -22,11 +22,11 @@ function loadTasks(){
                                 task.push(val);
                     });
                     
-                    listItems += '<dd class="accordion-navigation accordion-marginTop"><a href="#panel' + task[0] + '">'
+                    listItems += '<dd class="accordion-navigation"><a href="#panel' + task[0] + '">'
                     listItems += '<h2 class="accordion-titleFix">' + task[5] + '</h2></a>'
                     listItems += '<div id="panel' + task[0] + '" class="content">'
                     listItems += '<div class="row"><div class="large-12 column"><div class="right"><h4 class="textRight">' + task[1] + '</h4></div>'
-                    listItems += '<div class="left"><h6>' + task[3] + '<br>' + task[4] + '</h6></div></div><div class="large-12 column"><h3>' + task[2] + '</h3></div></div></div></dd>'
+                    listItems += '<div class="left"><h6>' + task[3] + ' hours worked<br>' + task[4] + ' estimated hours</h6></div></div><div class="large-12 column"><h3>' + task[2] + '</h3></div></div></div></dd><dd><img class="line-adjust" src="img/line-636363-500x1.png" alt="line-636363-500x1"></dd>'
                     
             });
             console.log(listItems);
@@ -63,6 +63,8 @@ var ref = new Firebase('https://designr.firebaseio.com//tasks');
 $('#submit').click(function() {
     location.reload();
 });
+
+
 
 //function go() {
     //var searchTerm = prompt('Task name?', 'Logo Redesign');

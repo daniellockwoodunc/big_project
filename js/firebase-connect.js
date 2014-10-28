@@ -64,6 +64,16 @@ $('#submit').click(function() {
     location.reload();
 });
 
+//$('.history').click(function updateTaskState(){
+    // var ref = 1
+     
+  //   ref.update({
+    //      state : "history"
+  //   })
+     
+//});
+
+
 //function go() {
     //var searchTerm = prompt('Task name?', 'Logo Redesign');
     //checkIfUserExists(searchTerm);

@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Designr App</title>
+    <title>Assignr History List</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/style-history.css" />
-    <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
     
@@ -36,7 +35,7 @@
 		
 		<!--New Task Modal-->
 		<div id="modalTask" class="reveal-modal" data-reveal>
-		    <h2>New Task</h2>
+		    <h2 id="newTask">New Task</h2>
 			<p class="lead">Create a dynamic list item.</p>
 			<form>
 			    <div class="row"><!----------Task Name---------->
@@ -92,210 +91,22 @@
 			    <a href="#" class="button left close-reveal-modal">Cancel</a><!----------CANCEL BUTTON---------->
 			</div>
 		
+                
 	    <div id="appTitle">
 		<h1>History</h1>
 	    </div>
        </nav>
     </div>
     
-    <div class="row">
+      <!------database test here!----->
+       <div class="row">
        <div class="large-12 columns">
 	    
-	    <dl class="accordion" data-accordion>
-		
-		<!-----Accordion 1----->
-	        <dd class="accordion-navigation accordion-marginTop"> <!--make sure to differentiate the first accordion with "accordion-marginTop"!-->
-		    <a href="#panel1">
-			<h2 class="accordion-titleFix">X-Corp Branding</h2>
-		    </a>
-		    <div id="panel1" class="content">
-			  <div class="row">
-			  <div class="large-12 column">
-			      <div class="right">
-				  <h4 class="textRight">10/8</h4>
-			 	  <img src="img/icon-importanceLvL3-636363-80x20.png" alt="icon-importanceLvL3-636363-80x20">
-			      </div>
-			      <div class="left">
-				  <h6>00d 26h 12m 23s<br>[30 hours projected]</h6>
-			     </div>
-			 </div><!-- end large-12 column-->
-			 <div class="large-12 column">
-			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
-			  </div><!--end large-12 column-->
-		         </div><!--end row-->
-		   </div>
-	   </dd>
+	    <dl class="accordion accordion-marginTop" data-accordion id="task-list">
                 
-            <!-----Division----->
-	       <dd>
-                <img class="line-adjust" src="img/line-636363-500x1.png" alt="line-636363-500x1">
-               </dd>
-               
-	    <!-----Accordion 2----->
-	    <dd class="accordion-navigation">
-		<a href="#panel2">
-		     <h2 class="accordion-titleFix">Logo Redesign</h2>
-		  </a>
-	       <div id="panel2" class="content">
-		  <div class="row">
-			  <div class="large-12 column">
-			      <div class="right">
-				  <h4 class="textRight">10/9</h4>
-			 	  <img src="img/icon-importanceLvL2-636363-80x20.png" alt="icon-importanceLvL2-636363-80x20">
-			      </div>
-			      <div class="left">
-				  <h6>00d 07h 08m 46s<br>[20 hours projected]</h6>
-			     </div>
-			 </div><!-- end large-12 column-->
-			 <div class="large-12 column">
-			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
-			  </div><!--end large-12 column-->
-		         </div><!--end row-->
-	       </div>
-	    </dd>
-	    
-            <!-----Division----->
-	       <dd>
-                <img class="line-adjust" src="img/line-636363-500x1.png" alt="line-636363-500x1">
-               </dd>
-            
-	    <!-----Accordion 3----->
-	    <dd class="accordion-navigation"> 
-		<a href="#panel3">
-		    <h2 class="accordion-titleFix">Fix Video Error</h2>
-		</a>
-	       <div id="panel3" class="content">
-		   <div class="row">
-			  <div class="large-12 column">
-			      <div class="right">
-				  <h4 class="textRight">10/10</h4>
-			 	  <img src="img/icon-importanceLvL2-636363-80x20.png" alt="icon-importanceLvL2-636363-80x20">
-			      </div>
-			      <div class="left">
-				  <h6>00d 11h 15m 37s<br>[15 hours projected]</h6>
-			     </div>
-			 </div><!-- end large-12 column-->
-			 <div class="large-12 column">
-			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
-			  </div><!--end large-12 column-->
-		         </div><!--end row-->
-		</div>
-	    </dd>
-		
-            <!-----Division----->
-	       <dd>
-                <img class="line-adjust" src="img/line-636363-500x1.png" alt="line-636363-500x1">
-               </dd>
-                
-		<!-----Accordion 4----->
-	        <dd class="accordion-navigation">
-		    <a href="#panel4">
-			<h2 class="accordion-titleFix">Friend's CV</h2>
-		    </a>
-		    <div id="panel4" class="content">
-			  <div class="row">
-			  <div class="large-12 column">
-			      <div class="right">
-				  <h4 class="textRight">10/18</h4>
-			 	  <img src="img/icon-importanceLvL1-636363-80x20.png" alt="icon-importanceLvL2-636363-80x20">
-			      </div>
-			      <div class="left">
-				  <h6>00d 07h 12m 46s<br>[10 hours projected]</h6>
-			     </div>
-			 </div><!-- end large-12 column-->
-			 <div class="large-12 column">
-			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
-			  </div><!--end large-12 column-->
-		         </div><!--end row-->
-		   </div>
-	   </dd>
-		
-            <!-----Division----->
-	       <dd>
-                <img class="line-adjust" src="img/line-636363-500x1.png" alt="line-636363-500x1">
-               </dd>
-                
-		<!-----Accordion 5----->
-	        <dd class="accordion-navigation">
-		    <a href="#panel5">
-			<h2 class="accordion-titleFix">Movie Poster</h2>
-		    </a>
-		    <div id="panel5" class="content">
-			  <div class="row">
-			  <div class="large-12 column">
-			      <div class="right">
-				  <h4 class="textRight">10/30</h4>
-			 	  <img src="img/icon-importanceLvL1-636363-80x20.png" alt="icon-importanceLvL2-636363-80x20">
-			      </div>
-			      <div class="left">
-				  <h6>00d 07h 12m 46s<br>[30 hours projected]</h6>
-			     </div>
-			 </div><!-- end large-12 column-->
-			 <div class="large-12 column">
-			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
-			  </div><!--end large-12 column-->
-		         </div><!--end row-->
-		   </div>
-	   </dd>
-	       
-            <!-----Division----->
-	       <dd>
-                <img class="line-adjust" src="img/line-636363-500x1.png" alt="line-636363-500x1">
-               </dd>
-               
-	    <!-----Accordion 6----->
-	    <dd class="accordion-navigation">
-		<a href="#panel6">
-		     <h2 class="accordion-titleFix">Portfolio Revision</h2>
-		  </a>
-	       <div id="panel6" class="content">
-		  <div class="row">
-			  <div class="large-12 column">
-			      <div class="right">
-				  <h4 class="textRight">10/2</h4>
-			 	  <img src="img/icon-importanceLvL2-636363-80x20.png" alt="icon-importanceLvL2-636363-80x20">
-			      </div>
-			      <div class="left">
-				  <h6>00d 07h 12m 46s<br>[30 hours projected]</h6>
-			     </div>
-			 </div><!-- end large-12 column-->
-			 <div class="large-12 column">
-			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
-			  </div><!--end large-12 column-->
-		         </div><!--end row-->
-	       </div>
-	    </dd>
-	    
-            <!-----Division----->
-	       <dd>
-                <img class="line-adjust" src="img/line-636363-500x1.png" alt="line-636363-500x1">
-               </dd>
-            
-	    <!-----Accordion 7----->
-	    <dd class="accordion-navigation"> 
-		<a href="#panel7">
-		    <h2 class="accordion-titleFix">Cinema 4D Tutorial</h2>
-		</a>
-	       <div id="panel7" class="content">
-		   <div class="row">
-			  <div class="large-12 column">
-			      <div class="right">
-				  <h4 class="textRight">10/2</h4>
-			 	  <img src="img/icon-importanceLvL2-636363-80x20.png" alt="icon-importanceLvL2-636363-80x20">
-			      </div>
-			      <div class="left">
-				  <h6>00d 07h 12m 46s<br>[30 hours projected]</h6>
-			     </div>
-			 </div><!-- end large-12 column-->
-			 <div class="large-12 column">
-			      <h3>This is the description for the project. Tapping a project on this screen will reveal this information. Active project highlighted. Box size changes.</h3>
-			  </div><!--end large-12 column-->
-		         </div><!--end row-->
-		</div>
-	    </dd>
-	    </dl>
-       </div> <!--end large-12 columns-->
-    </div><!--end row-->
+            </dl> 
+       </div>
+       </div>
     
     <div id="footer">
 	<div class="bottom-bar blackground">
@@ -316,12 +127,13 @@
 	    </div> <!--end #midIcon----->
 	    
 	    <!--Navsquare Modal-->
+            <!----------commenting out because this icon isn't currently being used
 		<div id="modalNav" class="reveal-modal" data-reveal>
 		    <h2>This is the future window for supplemental tasks</h2>
 			<p class="lead">Planned journal, inspiration picture storage</p>
 			<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
 			<a class="close-reveal-modal">&#215;</a>
-		</div>
+		</div>---->
        </div><!--end bottom-bar-->
     </div> <!--end footer-->
    <script src="js/vendor/modernizr.js"></script>
