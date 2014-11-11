@@ -1,6 +1,8 @@
 
 //place functions for data connect here...
 
+$(document).foundation();
+
 function loadTasks(){
      // Create our Firebase reference
      var tasksToDisplay = 5;
@@ -22,11 +24,15 @@ function loadTasks(){
                                 task.push(val);
                     });
                     
-                    listItems += '<dd class="accordion-navigation accordion-marginTop"><a href="#panel' + task[0] + '">'
-                    listItems += '<h2 class="accordion-titleFix">' + task[5] + '</h2></a>'
-                    listItems += '<div id="panel' + task[0] + '" class="content">'
-                    listItems += '<div class="row"><div class="large-12 column"><div class="right"><h4 class="textRight">' + task[1] + '</h4></div>'
-                    listItems += '<div class="left"><h6>' + task[3] + ' hours active<br>' + task[4] + ' estimated hours</h6></div></div><div class="large-12 column"><h3>' + task[2] + '</h3></div></div></div></dd>'
+                    listItems += '<dd class="accordion-navigation accordion-topEntry "><a href="#panel' + task[0] + '">'
+                    listItems += '<div class="accordion-titlebar-heightFix"><div class="date-div right"><p class="accordion-titleFix date-p">' + task[1] +'</p></div>'
+                    listItems += '<div class="left circle"></div>'
+                    listItems += '<div class="left"><p class="darker-p">' + task[5] + '</p>'
+                    listItems += '<p class="description-p">Project Name</p></div></div></a>'
+                    listItems += '<div id="panel' + task[0] + '" class="content"><div class="row"><div class="large-12 column squeeze"><div class="right">'
+                    listItems += '<p class="textRight time-text">[' + task[4] + ' hours projected]</p></div><div class="left">'
+                    listItems += '<p class="time-text">' + task[3] + ' hours active</p></div></div><div class="large-12 column squeeze">'
+                    listItems += '<p class="description-p">' + task [2] + '</p></div></div></div></dd>'
                     
             });
             console.log(listItems);

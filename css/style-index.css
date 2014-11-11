@@ -2,22 +2,81 @@
 
 body{
          
-                background-color:  #f5f5f5;
+                background-color:  #eaeaea;
                 color: #7f7f7f;
                 cursor: default;
-                font-family:  museoSans-300;
-                font-weight: normal;
+                font-family:  Roboto;
+                font-weight: 400;
                 font-style: normal;
+                font-size: 16px;
                 line-height: 150%;
                 position: relative;
 }
 
+h1, h2, h4 {
+        
+        color: #737373;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        line-height: inherit;
+        margin: 0px 0px 0px 0px;
+}
+
+h3 {
+        
+        color: #f5f5f5;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        line-height: inherit;
+        margin: 0px 0px 0px 0px;
+}
+
+h6 {
+        
+        color: #d3d3d3;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        margin: 0px 0px 0px 0px;
+        line-height: inherit;
+}
+
+p{
+                font-family: Roboto;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 16px;
+                margin-bottom: 0;
+                
+}
+
+.description-p{
+                font-family: Roboto;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 14px;
+}
+
+.date-p{
+                font-weight: 500;
+                font-size: 20px;
+                color: #7f7f7f;
+}
+
+.darker-p{
+                color: #7f7f7f;
+                margin-top: 12px;
+                font-weight: 500;
+}
 
 /*-----Created Class Stylings-----*/
 
 .accordion {
         
         margin-bottom: 0;
+}
+
+.accordion .content {
+    overflow: hidden;
 }
 
     .accordion:before, .accordion:after {
@@ -39,47 +98,93 @@ body{
     
     .accordion .accordion-navigation.active > a, .accordion dd.active > a {
             
-            background: #171717;
+            background: #fafafa;
+            color: #7f7f7f;
+    }
+    
+    .accordion .accordion-navigation.active > a, .accordion dd.active > a .darker-p{ /*--duplicate style to change color of the task name--*/
+            
+            color: #333333;
+    }
+
+    .accordion .accordion-navigation.active > a, .accordion dd.active > a .date-p{ /*--duplicate style to change color of the date--*/
+            
+            color: #333333;
+    }
+    
+        .accordion .accordion-navigation.active > a, .accordion dd.active > a .description-p{ /*--duplicate style to change color of the projectname--*/
+            
+            color: #7f7f7f;
     }
 
     .accordion .accordion-navigation > a, .accordion dd > a {
             
-            background: #636363;
-            color: #222222;
-            padding: 1rem;
+            background: #fafafa;
+            color: #cecece;
+            padding-bottom: 0;
+            padding-left: 16px;
+            padding-right: 0;
+            padding-top: 0;
             display: block;
     }
 
     .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
          
-            background: #333333;
+            background: #cecece;
+            color: #7f7f7f;
+    }
+    
+     .accordion .accordion-navigation > a:hover .darker-p, .accordion dd > a:hover .darker-p{ /*--duplicate style to change color of the task name--*/
+         
+            color: #333333;
+    }
+    
+         .accordion .accordion-navigation > a:hover .date-p, .accordion dd > a:hover .date-p{ /*--duplicate style to change color of the date--*/
+         
+            color: #333333;
     }
 
     .accordion .accordion-navigation > .content, .accordion dd > .content {
             display: none;
-            padding: 20px;
+            padding: 16px;
     }
 
     .accordion .accordion-navigation > .content.active, .accordion dd > .content.active {
             
             display: block;
-            background: #333333;
+            background: #f5f5f5;
+            color: #7f7f7f;
+    }    
+        .accordion .accordion-navigation > .content.active .time-text, .accordion dd > .content.active .time-text {
+            
+            display: block;
+            background: #f5f5f5;
+            color: #333333;
+            margin-bottom: 8px;
     }
 
 .accordion-marginTop {
         
-        margin-top: 20px;
+        margin-top: 1px;
+}
+
+.accordion-topEntry{
+        margin-top: 8px;
 }
 
 .accordion-titleFix {
         
-        line-height: inherit;
+        line-height: 72px;
         margin: 0px 0px 0px 0px
 }
 
 .accordion-heightFix {
         
         height: 120px;
+}
+
+.accordion-titlebar-heightFix {
+        height: 72px;
 }
 
 .bottom-bar {
@@ -90,9 +195,32 @@ body{
         padding: 0px 20px 0px 20px;
 }
 
+.circle {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+        margin-top: 18px;
+        margin-right: 16px;
+        background-color: #000000;
+	/* width and height can be anything, as long as they're equal */
+}
+
 .column, .columns {
         
-        padding: 0px 20px 0px 20px;
+        padding: 0;
+}
+
+.date-div{
+                text-align: right;
+                width: 56px;
+                height: inherit;
+                margin-right: 16px;
+        
+}
+
+.squeeze {
+        padding-left: 16px;
+        padding-right: 16px;
 }
 
 .textRight {
@@ -102,16 +230,18 @@ body{
 
 .top-bar {
         
-        background:#171717;
-        height: 80px;
-        line-height: 80px;
-        padding: 0px 20px 0px 20px;
+        background:#fafafa;
+        height: 56px;
+        line-height: 56px;
+        padding: 0px 16px 0px 16px;
+        border-bottom: 1px solid #f1f1f1;
 }
 
-#appTitle  > h1 {
+#appTitle {
         
         line-height: inherit;
-        margin: 0px 0px 0px 0px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
 }
 
@@ -123,37 +253,32 @@ body{
 
         vertical-align: middle;
 }
+/*-----Material Design-----*/
+
+/*.bottom-to-top {
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-image: 
+      -webkit-gradient(linear, 0 100%, 0 0, from(#f1f1f1), to(rgba(245, 245, 245, 1))) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(bottom, #f1f1f1, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(bottom, black, rgba(0, 0, 0, 0)) 1 100%;  
+    -o-border-image:
+      -o-linear-gradient(bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+      linear-gradient(to top, black, rgba(0, 0, 0, 0)) 1 100%;
+}--*/
+
+.box-shadow {
+        box-shadow: 0 2px 2px -2px #7f7f7f;
+}
 
 /*-----Modal Window Stylings-----*/
 
 #modalSettings > h2 {
         
         font-style: italic;
-}
-
-/*-----Text Elements-----*/
-
-h1, h2, h4 {
-        
-        color: #f5f5f5;
-        font-family: museoSans-700;
-        line-height: inherit;
-        margin: 0px 0px 0px 0px;
-}
-
-h3 {
-        
-        color: #f5f5f5;
-        font-family: museoSans-300;
-        line-height: inherit;
-        margin: 0px 0px 0px 0px;
-}
-h6 {
-        
-        color: #d3d3d3;
-        font-family: museoSans-100-italic;
-        margin: 0px 0px 0px 0px;
-        line-height: inherit;
 }
 
 
@@ -183,6 +308,8 @@ h6 {
         src: url(../fonts/museoSans-700.otf);
 }
 
+font-family: 'Roboto', sans-serif;
+
 /* -----Label Styles----- */
 label {
   font-size: 0.875rem;
@@ -211,8 +338,8 @@ label {
   bottom: 0;
   left: 0;
   right: 0;
-  background: black;
-  background: rgba(0, 0, 0, 0.95);
+  background: #fafafa;
+  background: #fafafa;
   z-index: 1004;
   display: none;
   left: 0; }
@@ -314,7 +441,7 @@ label {
     position: relative;
     top: 0;
     right: 0;
-    color: #f5f5f5;
+    color: #333333;
     font-weight: normal;
     cursor: pointer; }
 
@@ -366,9 +493,9 @@ button, .button {
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
   font-size: 1rem;
-  background-color: #7f7f7f;
+  background-color: #eaeaea;
   border-color: #474747;
-  color: #f5f5f5;
+  color: #333333;
   transition: background-color 300ms ease-out; }
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #474747; }
@@ -535,10 +662,9 @@ input[type="color"],
 textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   font-family: inherit;
-  border: 1px solid #cccccc;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 0 0 1px 0 solid #eaeaea;
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-size: 0.875rem;
@@ -565,8 +691,7 @@ textarea {
   input[type="url"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    box-shadow: 0 0 5px #999999;
-    border-color: #999999; }
+    border-color: #333333; }
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="date"]:focus,
@@ -582,8 +707,9 @@ textarea {
   input[type="url"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    background: #f5f5f5;
-    border-color: #999999;
+    background: #fafafa;
+    border-color: #333333;
+    border: 0 0 3px 0;
     outline: none; }
   input[type="text"]:disabled,
   input[type="password"]:disabled,
