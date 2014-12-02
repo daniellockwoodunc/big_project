@@ -47,7 +47,7 @@ var ref = new Firebase('https://designr.firebaseio.com//tasks');
     var taskActive = $('#taskActiveInput').val();
     var taskEstimate = $('#taskEstimateInput').val();
     var taskState = $('#taskStateInput').val();
-    
+    var taskZproject = $('#taskZprojectInput').val();
     //var newTaskRef =taskListRef.child(taskName);
     ref.push({
                      name : taskName,
@@ -55,7 +55,8 @@ var ref = new Firebase('https://designr.firebaseio.com//tasks');
                      description : taskDescription,
                      hoursActive : "0",
                      hoursEstimate : taskEstimate,
-                     state : "active"
+                     state : "active",
+                     zproject: "Miscellanious"
                      });
     console.log(taskName);
     

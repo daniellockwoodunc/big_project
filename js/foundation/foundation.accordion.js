@@ -43,6 +43,7 @@
           settings.callback(target);
           target.triggerHandler('toggled', [accordion]);
           accordion.triggerHandler('toggled', [target]);
+          countUp(target);
           return;
         }
 
@@ -55,6 +56,8 @@
         settings.callback(target);
         target.triggerHandler('toggled', [accordion]);
         accordion.triggerHandler('toggled', [target]);
+        
+        countUp(target);
       });
     },
 
