@@ -10,14 +10,16 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
   </head>
   <body class="index">
-    
+  
+
+  
     <!-- top-nav, stickied-->
     <div class="fixed box-shadow">
 	<nav class="top-bar" data-topbar role="navigation">
 	    
 	    <div id="pageTransfer" class="left">
 	        <a href="history.html"><!-----fill data-reveal-id with modalSettings"----->
-		    <img src="img/icon-chevronLeft-big-24x24.png" alt="icon-chevronLeft-24x24">
+		    <img src="img/icon-chevronLeft-big-24x24.png" alt="icon-chevronLeft-24x24" style="visibility:hidden">
 	       </a>
 	    </div>
 		
@@ -63,7 +65,7 @@
 					        <span class="postfix">date</span>
 					    </div>
 					    <div class="small-10 columns">
-						<input type="text"  id="taskDateInput" placeholder="12/31" />
+						<input type="text"  id="taskDateInput" placeholder="mm/dd" />
 					    </div>
 					   <!-- <div class="small-2 columns">
 					        <span class="postfix">month</span>
@@ -109,21 +111,21 @@
 		
 	    
 	    
-	    <!-------------------STYLE TEST FOR ACCORDION------------------------------------------->
-	    <dd class="accordion-navigation accordion-topEntry "> <!--removed "bottom-to-top"-->
-		<a href="#panel7">
+	    <!-------------------STYLE TEST FOR ACCORDION---------------------Commenting out for Alpha release---------------------->
+	   <!-- <dd class="accordion-navigation accordion-topEntry "> <!--removed "bottom-to-top"-->
+		<!--<a href="#panel7">
 		  <div class="accordion-titlebar-heightFix" id="clickTest"><!--Containing all content within accordion header-->
-		      <div class="date-div right">
+		      <!--<div class="date-div right">
 			 <p class="accordion-titleFix date-p">12/31</p>
 		      </div>
 		      <div class="left circle"><!--test avatar circle-->
-		      </div><!--end Circle-->
-		      <div class="left">
+		      <!--</div><!--end Circle-->
+		      <!--<div class="left">
 			  <p class="darker-p">Style Test</p>
 			  <p class="description-p">Project Name</p>
 		      </div>
 		  </div><!--Closing mainaccordion header containing div-->
-		</a>
+		<!--</a>
 	       <div id="panel7" class="content">
 		   <div class="row">
 			  <div class="large-12 column squeeze">
